@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1566577596
-ModificationTime: 1567008082
+ModificationTime: 1567010113
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -36,6 +36,7 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
+OS2Vendor: 'PfEd'
 Lookup: 6 0 0 "semivowels" { "semivowels contextual 0"  "semivowels contextual 1"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 1" { "Single Substitution lookup 1 subtable"  } []
 Lookup: 1 0 0 "Single Substitution lookup 2" { "Single Substitution lookup 2 subtable"  } []
@@ -101,23 +102,16 @@ Lookup: 6 0 0 "Vupper2" { "Vupper2 subtable"  } ['liga' ('latn' <'dflt' > 'DFLT'
 Lookup: 1 0 0 "Single Substitution lookup 62" { "Single Substitution lookup 62 subtable"  } []
 Lookup: 6 0 0 "Vlower" { "Vlower subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 64" { "Single Substitution lookup 64 subtable"  } []
-Lookup: 6 0 0 "Vdenpabu" { "Vdenpabu subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 66" { "Single Substitution lookup 66 subtable"  } []
+Lookup: 4 0 1 "Vdenpabu" { "Vdenpabu subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 1 "Sdenpabu" { "Sdenpabu subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 260 0 0 "Above" { "Above-1"  } ['mark' ('DFLT' <'dflt' > 'latn' <'ROM ' 'TRK ' 'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-ChainSub2: coverage "Vdenpabu subtable" 0 0 0 1
- 1 1 0
-  Coverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 7 denpabu
- 1
-  SeqLookup: 0 "Single Substitution lookup 66"
-EndFPST
 ChainSub2: coverage "Vlower subtable" 0 0 0 1
  1 2 0
   Coverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 180 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower
-  BCoverage: 180 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper iy.upper uy.upper
+  BCoverage: 162 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower
+  BCoverage: 162 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper
  1
   SeqLookup: 0 "Single Substitution lookup 64"
 EndFPST
@@ -131,31 +125,31 @@ EndFPST
 ChainSub2: coverage "Vupper subtable" 0 0 0 1
  1 1 1
   Coverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 180 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper iy.upper uy.upper
-  FCoverage: 180 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower
+  BCoverage: 162 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper
+  FCoverage: 162 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower
  1
   SeqLookup: 0 "Single Substitution lookup 60"
 EndFPST
 ChainSub2: coverage "Cupper2 subtable" 0 0 0 1
  1 0 2
-  Coverage: 60 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy iy uy
+  Coverage: 54 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy
   FCoverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  FCoverage: 180 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower
+  FCoverage: 162 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower
  1
   SeqLookup: 0 "Single Substitution lookup 58"
 EndFPST
 ChainSub2: coverage "Cupper subtable" 0 0 0 1
  1 0 1
-  Coverage: 60 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy iy uy
-  FCoverage: 180 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower
+  Coverage: 54 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy
+  FCoverage: 162 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower
  1
   SeqLookup: 0 "Single Substitution lookup 56"
 EndFPST
 ChainSub2: coverage "Clower2 subtable" 0 0 0 1
  1 2 0
-  Coverage: 60 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy iy uy
+  Coverage: 54 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy
   BCoverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 60 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy iy uy
+  BCoverage: 54 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy
  1
   SeqLookup: 0 "Single Substitution lookup 54"
 EndFPST
@@ -523,7 +517,7 @@ NameList: AGL For New Fonts
 DisplaySize: -96
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 16 7
+WinInfo: 0 16 6
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -550,7 +544,7 @@ Grid
   Named: "z-top"
 EndSplineSet
 AnchorClass2: "Above" "Above-1"
-BeginChars: 284 97
+BeginChars: 287 95
 
 StartChar: space
 Encoding: 204 32 0
@@ -981,13 +975,10 @@ SplineSet
  39.4091796875 944.853515625 52.763671875 971.828125 74.87109375 989.291015625 c 0
  87.00390625 998.874023438 101.513671875 1003.52832031 107.716796875 1003.52832031 c 2
 EndSplineSet
-Substitution2: "Single Substitution lookup 58 subtable" iy.upper
-Substitution2: "Single Substitution lookup 56 subtable" iy.upper
-Substitution2: "Single Substitution lookup 54 subtable" iy.lower
 EndChar
 
 StartChar: abu
-Encoding: 10 60238 11
+Encoding: 10 60234 11
 Width: 1200
 VWidth: 0
 Flags: W
@@ -996,16 +987,16 @@ VStem: 508 179.869<425.584 582.416> 548.472 79.0566<1196.72 1467.28>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 42 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" abu
+Ligature2: "Vdenpabu subtable" denpabu abu
 Substitution2: "Single Substitution lookup 64 subtable" abu.lower
 Substitution2: "Single Substitution lookup 62 subtable" abu.upper
 Substitution2: "Single Substitution lookup 60 subtable" abu.upper
 EndChar
 
 StartChar: ebu
-Encoding: 11 60234 12
+Encoding: 11 60235 12
 Width: 1200
 VWidth: 0
 Flags: W
@@ -1014,9 +1005,9 @@ VStem: 287.283 598.434 508 179.869<425.584 582.416>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 43 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" ebu
+Ligature2: "Vdenpabu subtable" denpabu ebu
 Substitution2: "Single Substitution lookup 64 subtable" ebu.lower
 Substitution2: "Single Substitution lookup 62 subtable" ebu.upper
 Substitution2: "Single Substitution lookup 60 subtable" ebu.upper
@@ -1032,9 +1023,9 @@ VStem: 508 179.869<425.584 582.416> 513.114 179.869<1206.64 1363.48>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 44 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" ibu
+Ligature2: "Vdenpabu subtable" denpabu ibu
 Substitution2: "Single Substitution lookup 64 subtable" ibu.lower
 Substitution2: "Single Substitution lookup 62 subtable" ibu.upper
 Substitution2: "Single Substitution lookup 60 subtable" ibu.upper
@@ -1042,7 +1033,7 @@ Substitution2: "Single Substitution lookup 1 subtable" iy
 EndChar
 
 StartChar: obu
-Encoding: 13 60235 14
+Encoding: 13 60237 14
 Width: 1200
 VWidth: 0
 Flags: W
@@ -1051,16 +1042,16 @@ VStem: 292.057 635.811 508 179.869<425.584 582.416>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 45 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" obu
+Ligature2: "Vdenpabu subtable" denpabu obu
 Substitution2: "Single Substitution lookup 64 subtable" obu.lower
 Substitution2: "Single Substitution lookup 62 subtable" obu.upper
 Substitution2: "Single Substitution lookup 60 subtable" obu.upper
 EndChar
 
 StartChar: ubu
-Encoding: 14 60237 15
+Encoding: 14 60238 15
 Width: 1200
 VWidth: 0
 Flags: W
@@ -1069,9 +1060,9 @@ VStem: 296.672 596.155 508 179.869<425.584 582.416>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 46 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" ubu
+Ligature2: "Vdenpabu subtable" denpabu ubu
 Substitution2: "Single Substitution lookup 64 subtable" ubu.lower
 Substitution2: "Single Substitution lookup 62 subtable" ubu.upper
 Substitution2: "Single Substitution lookup 60 subtable" ubu.upper
@@ -1088,9 +1079,9 @@ VStem: 369.472 79.0566<1244.13 1426.83> 508 179.869<425.584 582.416> 749.472 79.
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 60255 S 1 0 0 1 0 0 2
+Refer: 94 60255 S 1 0 0 1 0 0 2
 Refer: 47 -1 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" ybu
+Ligature2: "Vdenpabu subtable" denpabu ybu
 Substitution2: "Single Substitution lookup 64 subtable" ybu.lower
 Substitution2: "Single Substitution lookup 62 subtable" ybu.upper
 Substitution2: "Single Substitution lookup 60 subtable" ybu.upper
@@ -1319,7 +1310,7 @@ Substitution2: "Single Substitution lookup 18 subtable" ny.lower
 EndChar
 
 StartChar: yhy
-Encoding: 24 60249 25
+Encoding: 24 60248 25
 Width: 1200
 VWidth: 2000
 Flags: W
@@ -1347,7 +1338,7 @@ Substitution2: "Single Substitution lookup 54 subtable" yhy.lower
 EndChar
 
 StartChar: uy
-Encoding: 25 60248 26
+Encoding: 25 60249 26
 Width: 1200
 VWidth: 4000
 Flags: W
@@ -1379,9 +1370,6 @@ SplineSet
  90.470703125 976.283203125 l 1
  130 1000 l 1
 EndSplineSet
-Substitution2: "Single Substitution lookup 58 subtable" uy.upper
-Substitution2: "Single Substitution lookup 56 subtable" uy.upper
-Substitution2: "Single Substitution lookup 54 subtable" uy.lower
 EndChar
 
 StartChar: aibu
@@ -1394,8 +1382,8 @@ VStem: 444.472 79.0566<1196.72 1467.28> 508 179.869<425.584 582.416> 627.114 179
 LayerCount: 2
 Fore
 Refer: 58 -1 S 1 0 0 1 0 0 2
-Refer: 96 60255 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" aibu
+Refer: 94 60255 N 1 0 0 1 0 0 2
+Ligature2: "Vdenpabu subtable" denpabu aibu
 Substitution2: "Single Substitution lookup 64 subtable" aibu.lower
 Substitution2: "Single Substitution lookup 62 subtable" aibu.upper
 Substitution2: "Single Substitution lookup 60 subtable" aibu.upper
@@ -1413,8 +1401,8 @@ VStem: 287.283 598.434 508 179.869<425.584 582.416> 513.114 179.869<1330.64 1487
 LayerCount: 2
 Fore
 Refer: 59 -1 S 1 0 0 1 0 0 2
-Refer: 96 60255 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" eibu
+Refer: 94 60255 N 1 0 0 1 0 0 2
+Ligature2: "Vdenpabu subtable" denpabu eibu
 Substitution2: "Single Substitution lookup 64 subtable" eibu.lower
 Substitution2: "Single Substitution lookup 62 subtable" eibu.upper
 Substitution2: "Single Substitution lookup 60 subtable" eibu.upper
@@ -1432,8 +1420,8 @@ VStem: 292.057 635.811 508 179.869<425.584 582.416> 513.114 179.869<1384.64 1541
 LayerCount: 2
 Fore
 Refer: 60 -1 S 1 0 0 1 0 0 2
-Refer: 96 60255 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" oibu
+Refer: 94 60255 N 1 0 0 1 0 0 2
+Ligature2: "Vdenpabu subtable" denpabu oibu
 Substitution2: "Single Substitution lookup 64 subtable" oibu.lower
 Substitution2: "Single Substitution lookup 62 subtable" oibu.upper
 Substitution2: "Single Substitution lookup 60 subtable" oibu.upper
@@ -1451,8 +1439,8 @@ VStem: 296.672 596.155 508 179.869<425.584 582.416> 548.472 79.0566<1196.72 1467
 LayerCount: 2
 Fore
 Refer: 61 -1 S 1 0 0 1 0 0 2
-Refer: 96 60255 N 1 0 0 1 0 0 2
-Substitution2: "Single Substitution lookup 66 subtable" aubu
+Refer: 94 60255 N 1 0 0 1 0 0 2
+Ligature2: "Vdenpabu subtable" denpabu aubu
 Substitution2: "Single Substitution lookup 64 subtable" aubu.lower
 Substitution2: "Single Substitution lookup 62 subtable" aubu.upper
 Substitution2: "Single Substitution lookup 60 subtable" aubu.upper
@@ -1805,13 +1793,13 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: iy.upper
+StartChar: iy.dotted
 Encoding: 41 -1 41
 Width: 1200
-VWidth: 0
+VWidth: 2000
 Flags: W
-HStem: 960.472 79.0566<198.86 1034.25>
-AnchorPoint: "Above" 600 0 basechar 0
+HStem: 549.06 173.881<515.111 680.758> 924.472 79.0566<159.735 1059.5>
+VStem: 508 179.869<557.584 714.416>
 LayerCount: 2
 Back
 SplineSet
@@ -1821,21 +1809,9 @@ SplineSet
  84 1000 l 5
 EndSplineSet
 Fore
-SplineSet
-198.860351562 960.471679688 m 1
- 618.99609375 564.71484375 l 1
- 1034.25488281 960.471679688 l 1
- 198.860351562 960.471679688 l 1
-107.716796875 1039.52832031 m 2
- 1135.71679688 1039.52832031 l 2
- 1153.89355469 1039.52832031 1156.68164062 1019.54980469 1141.6640625 996.8984375 c 0
- 1137.87988281 991.19140625 1130.91601562 983.462890625 1127.95800781 980.64453125 c 2
- 616.958984375 493.643554688 l 2
- 597.059570312 474.6796875 574.342773438 469.443359375 565.913085938 477.384765625 c 2
- 48.9130859375 964.384765625 l 2
- 38.44921875 974.241210938 47.677734375 1000.25292969 68.60546875 1019.88964844 c 0
- 82.3330078125 1032.76953125 99.12890625 1039.52832031 107.716796875 1039.52832031 c 2
-EndSplineSet
+Refer: 94 60255 N 1 0 0 1 0 132 2
+Refer: 10 60233 N 1 0 0 1 0 0 2
+Ligature2: "Sdenpabu subtable" denpabu iy
 EndChar
 
 StartChar: abu.upper
@@ -2184,17 +2160,16 @@ VStem: 562.471 79.0576<511.358 988.142>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 25 60249 N 1 0 0 0.5 0 500 2
+Refer: 25 60248 N 1 0 0 0.5 0 500 2
 EndChar
 
-StartChar: uy.upper
+StartChar: uy.dotted
 Encoding: 57 -1 57
 Width: 1200
-VWidth: 0
+VWidth: 4000
 Flags: W
-HStem: 546.255 79.0566<169.528 1026.47>
-VStem: 90.4717 79.0566<625.312 1049.57> 1026.47 79.0566<625.312 1049.57>
-AnchorPoint: "Above" 600 0 basechar 0
+HStem: -14.5283 79.0566<169.528 1026.47> 417.06 173.881<515.111 680.758>
+VStem: 90.4717 79.0566<64.5283 976.283> 508 179.869<425.584 582.416> 1026.47 79.0566<64.5283 976.283>
 LayerCount: 2
 Back
 SplineSet
@@ -2204,22 +2179,9 @@ SplineSet
  1066 1012 l 1029
 EndSplineSet
 Fore
-SplineSet
-130 1073.28320312 m 1
- 169.528320312 1097 l 1
- 169.528320312 625.311523438 l 1
- 1026.47167969 625.311523438 l 1
- 1026.47167969 1049.56640625 l 1
- 1066 1073.28320312 l 1
- 1105.52832031 1097.00097656 l 1
- 1105.52832031 609.5 l 2
- 1105.52832031 605.385742188 1103.421875 596.3984375 1099.38574219 588.884765625 c 0
- 1087.22167969 566.232421875 1060.45996094 546.254882812 1042.28320312 546.254882812 c 2
- 106.283203125 546.254882812 l 2
- 97.9609375 546.254882812 90.4716796875 551.827148438 90.4716796875 562.06640625 c 2
- 90.4716796875 1049.56542969 l 1
- 130 1073.28320312 l 1
-EndSplineSet
+Refer: 94 60255 S 1 0 0 1 0 0 2
+Refer: 26 60249 N 1 0 0 1 0 0 2
+Ligature2: "Sdenpabu subtable" denpabu uy
 EndChar
 
 StartChar: aibu.upper
@@ -2404,20 +2366,8 @@ Fore
 Refer: 40 -1 N 1 0 0 1 0 -600 2
 EndChar
 
-StartChar: iy.lower
-Encoding: 73 -1 73
-Width: 0
-VWidth: 0
-Flags: W
-HStem: 360.472 79.0566<198.86 1034.25>
-AnchorPoint: "Above" 600 0 mark 0
-LayerCount: 2
-Fore
-Refer: 41 -1 N 1 0 0 1 0 -600 2
-EndChar
-
 StartChar: abu.lower
-Encoding: 74 -1 74
+Encoding: 74 -1 73
 Width: 0
 VWidth: 0
 Flags: W
@@ -2430,7 +2380,7 @@ Refer: 42 -1 N 1 0 0 1 0 -1700 2
 EndChar
 
 StartChar: ebu.lower
-Encoding: 75 -1 75
+Encoding: 75 -1 74
 Width: 0
 VWidth: 0
 Flags: W
@@ -2443,7 +2393,7 @@ Refer: 43 -1 N 1 0 0 1 0 -1696 2
 EndChar
 
 StartChar: ibu.lower
-Encoding: 76 -1 76
+Encoding: 76 -1 75
 Width: 0
 VWidth: 0
 Flags: W
@@ -2456,7 +2406,7 @@ Refer: 44 -1 N 1 0 0 1 0 -1690 2
 EndChar
 
 StartChar: obu.lower
-Encoding: 77 -1 77
+Encoding: 77 -1 76
 Width: 0
 VWidth: 0
 Flags: W
@@ -2469,7 +2419,7 @@ Refer: 45 -1 S 1 0 0 1 0 -1674 2
 EndChar
 
 StartChar: ubu.lower
-Encoding: 78 -1 78
+Encoding: 78 -1 77
 Width: 0
 VWidth: 0
 Flags: W
@@ -2482,7 +2432,7 @@ Refer: 46 -1 N 1 0 0 1 0 -1672 2
 EndChar
 
 StartChar: ybu.lower
-Encoding: 79 -1 79
+Encoding: 79 -1 78
 Width: 0
 VWidth: 0
 Flags: W
@@ -2495,7 +2445,7 @@ Refer: 47 -1 N 1 0 0 1 0 -1722 2
 EndChar
 
 StartChar: by.lower
-Encoding: 80 -1 80
+Encoding: 80 -1 79
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2507,7 +2457,7 @@ Refer: 48 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: dy.lower
-Encoding: 81 -1 81
+Encoding: 81 -1 80
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2520,7 +2470,7 @@ Refer: 49 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: gy.lower
-Encoding: 82 -1 82
+Encoding: 82 -1 81
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2532,7 +2482,7 @@ Refer: 50 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: vy.lower
-Encoding: 83 -1 83
+Encoding: 83 -1 82
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2544,7 +2494,7 @@ Refer: 51 -1 S 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: ry.lower
-Encoding: 84 -1 84
+Encoding: 84 -1 83
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2557,7 +2507,7 @@ Refer: 52 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: zy.lower
-Encoding: 85 -1 85
+Encoding: 85 -1 84
 Width: 0
 VWidth: 0
 Flags: W
@@ -2570,7 +2520,7 @@ Refer: 53 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: jy.lower
-Encoding: 86 -1 86
+Encoding: 86 -1 85
 Width: 0
 VWidth: 0
 Flags: W
@@ -2583,7 +2533,7 @@ Refer: 54 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: ny.lower
-Encoding: 87 -1 87
+Encoding: 87 -1 86
 Width: 0
 VWidth: 2000
 Flags: W
@@ -2596,7 +2546,7 @@ Refer: 55 -1 N 1 0 0 1 0 -600 2
 EndChar
 
 StartChar: yhy.lower
-Encoding: 88 -1 88
+Encoding: 88 -1 87
 Width: 0
 VWidth: 0
 Flags: W
@@ -2604,24 +2554,11 @@ VStem: 562.471 79.0576<11.3584 488.142>
 AnchorPoint: "Above" 600 0 mark 0
 LayerCount: 2
 Fore
-Refer: 25 60249 N 1 0 0 0.5 0 0 2
-EndChar
-
-StartChar: uy.lower
-Encoding: 89 -1 89
-Width: 0
-VWidth: 0
-Flags: W
-HStem: -53.7451 79.0566<169.528 1026.47>
-VStem: 90.4717 79.0566<25.3115 449.565> 1026.47 79.0566<25.3115 449.566>
-AnchorPoint: "Above" 600 0 mark 0
-LayerCount: 2
-Fore
-Refer: 57 -1 N 1 0 0 1 0 -600 2
+Refer: 25 60248 N 1 0 0 0.5 0 0 2
 EndChar
 
 StartChar: aibu.lower
-Encoding: 90 -1 90
+Encoding: 90 -1 88
 Width: 0
 VWidth: 0
 Flags: W
@@ -2633,7 +2570,7 @@ Refer: 58 -1 S 1 0 0 1 0 -1712 2
 EndChar
 
 StartChar: eibu.lower
-Encoding: 91 -1 91
+Encoding: 91 -1 89
 Width: 0
 VWidth: 0
 Flags: W
@@ -2645,7 +2582,7 @@ Refer: 59 -1 N 1 0 0 1 0 -1754 2
 EndChar
 
 StartChar: oibu.lower
-Encoding: 92 -1 92
+Encoding: 92 -1 90
 Width: 0
 VWidth: 0
 Flags: W
@@ -2657,7 +2594,7 @@ Refer: 60 -1 N 1 0 0 1 0 -1700 2
 EndChar
 
 StartChar: aubu.lower
-Encoding: 93 -1 93
+Encoding: 93 -1 91
 Width: 0
 VWidth: 0
 Flags: W
@@ -2669,7 +2606,7 @@ Refer: 61 -1 N 1 0 0 1 0 -1684 2
 EndChar
 
 StartChar: NameMe.62
-Encoding: 94 -1 94
+Encoding: 94 -1 92
 Width: 0
 VWidth: 0
 Flags: W
@@ -2677,7 +2614,7 @@ LayerCount: 2
 EndChar
 
 StartChar: NameMe.63
-Encoding: 95 -1 95
+Encoding: 95 -1 93
 Width: 0
 VWidth: 0
 Flags: W
@@ -2685,7 +2622,7 @@ LayerCount: 2
 EndChar
 
 StartChar: denpabu
-Encoding: 31 60255 96
+Encoding: 31 60255 94
 Width: 1200
 VWidth: 0
 Flags: W

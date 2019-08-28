@@ -8,8 +8,11 @@
 #
 
 @consonant = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy iy uy ];
-@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper iy.upper uy.upper ];
-@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower ];
+@c_reg = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy ];
+@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper ];
+@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower ];
+@semivowel = [ iy uy ];
+@semivowel_dotted = [ iy.dotted uy.dotted ];
 @singlevowel = [ abu ebu ibu obu ubu ybu ];
 @sv_upper = [ abu.upper ebu.upper ibu.upper obu.upper ubu.upper ybu.upper ];
 @sv_lower = [ abu.lower ebu.lower ibu.lower obu.lower ubu.lower ybu.lower ];
@@ -108,17 +111,17 @@ lookup Clower {
 
 lookup Clower2 {
   lookupflag 0;
-  sub @consonant @vowel @consonant' by @c_lower;
+  sub @c_reg @vowel @c_reg' by @c_lower;
 } Clower2;
 
 lookup Cupper {
   lookupflag 0;
-  sub @consonant' @c_lower by @c_upper;
+  sub @c_reg' @c_lower by @c_upper;
 } Cupper;
 
 lookup Cupper2 {
   lookupflag 0;
-  sub @consonant' @vowel @c_lower by @c_upper;
+  sub @c_reg' @vowel @c_lower by @c_upper;
 } Cupper2;
 
 lookup Vupper {
@@ -138,8 +141,23 @@ lookup Vlower {
 
 lookup Vdenpabu {
   lookupflag 0;
-  sub denpabu @vowel' by @vowel;
+  sub denpabu abu by abu;
+  sub denpabu ebu by ebu;
+  sub denpabu ibu by ibu;
+  sub denpabu obu by obu;
+  sub denpabu ubu by ubu;
+  sub denpabu ybu by ybu;
+  sub denpabu aibu by aibu;
+  sub denpabu eibu by eibu;
+  sub denpabu oibu by oibu;
+  sub denpabu aubu by aubu;
 } Vdenpabu;
+
+lookup Sdenpabu {
+  lookupflag 0;
+  sub denpabu uy by uy.dotted;
+  sub denpabu iy by iy.dotted;
+} Sdenpabu;
 
 feature liga {
   script DFLT;
@@ -154,6 +172,7 @@ feature liga {
     lookup Vupper2;
     lookup Vlower;
     lookup Vdenpabu;
+    lookup Sdenpabu;
   script latn;
     language dflt;
     lookup semivowels;
@@ -166,5 +185,6 @@ feature liga {
     lookup Vupper2;
     lookup Vlower;
     lookup Vdenpabu;
+    lookup Sdenpabu;
 } liga;
 
