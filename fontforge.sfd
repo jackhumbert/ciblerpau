@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1566577596
-ModificationTime: 1567011643
+ModificationTime: 1567011708
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -1825,9 +1825,10 @@ StartChar: iy.dotted
 Encoding: 41 -1 41
 Width: 1200
 VWidth: 2000
-Flags: W
+Flags: WO
 HStem: 549.06 173.881<517.176 682.824> 924.472 79.0566<159.735 1059.5>
 VStem: 510.065 179.869<557.584 714.416>
+AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -2187,6 +2188,7 @@ VWidth: 4000
 Flags: W
 HStem: -14.5283 79.0566<169.528 1026.47> 417.06 173.881<517.176 682.824>
 VStem: 90.4717 79.0566<64.5283 976.283> 510.065 179.869<425.584 582.416> 1026.47 79.0566<64.5283 976.283>
+AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -2266,7 +2268,7 @@ StartChar: denpabu.liga
 Encoding: 63 -1 62
 Width: 600
 VWidth: 0
-Flags: WO
+Flags: W
 HStem: 468.8 78.4004<280.588 630.304>
 VStem: 859.472 79.0566<791.138 976.283>
 AnchorPoint: "Above" 302.065 0 basechar 0
