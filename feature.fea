@@ -8,9 +8,9 @@
 #
 
 @consonant = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy iy uy ];
-@c_reg = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy ];
-@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper ];
-@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower ];
+@c_reg = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny ];
+@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper ];
+@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower ];
 @semivowel = [ iy uy ];
 @semivowel_dotted = [ iy.dotted uy.dotted ];
 @singlevowel = [ abu ebu ibu obu ubu ybu ];
@@ -45,6 +45,16 @@ lookup diphthongs {
   sub obu ibu by oibu;
   sub abu ubu by aubu;
 } diphthongs;
+
+lookup denpabu {
+  lookupflag 0;
+  sub denpabu' @vowel yhy @vowel by denpabu.liga;
+} denpabu;
+
+lookup denpabuV {
+  lookupflag 0;
+  sub denpabu.liga @vowel' yhy @vowel by @v_upper;
+} denpabuV;
 
 # sub non-inits for .center
 
@@ -164,6 +174,8 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
+    lookup denpabu;
+    lookup denpabuV;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
@@ -177,6 +189,8 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
+    lookup denpabu;
+    lookup denpabuV;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
