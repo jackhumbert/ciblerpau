@@ -174,8 +174,6 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
-    lookup denpabu;
-    lookup denpabuV;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
@@ -189,8 +187,6 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
-    lookup denpabu;
-    lookup denpabuV;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
@@ -201,4 +197,15 @@ feature liga {
     lookup Vdenpabu;
     lookup Sdenpabu;
 } liga;
+
+feature salt {
+  script DFLT;
+    language dflt;
+    lookup denpabu;
+    lookup denpabuV;
+  script latn;
+    language dflt;
+    lookup denpabu;
+    lookup denpabuV;
+} salt;
 

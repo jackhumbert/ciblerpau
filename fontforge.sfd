@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1566577596
-ModificationTime: 1567011944
+ModificationTime: 1567013394
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -40,9 +40,9 @@ Lookup: 6 0 0 "semivowels" { "semivowels contextual 0"  "semivowels contextual 1
 Lookup: 1 0 0 "Single Substitution lookup 1" { "Single Substitution lookup 1 subtable"  } []
 Lookup: 1 0 0 "Single Substitution lookup 2" { "Single Substitution lookup 2 subtable"  } []
 Lookup: 4 0 1 "diphthongs" { "diphthongs subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
-Lookup: 6 0 0 "denpabu" { "denpabu subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 6 0 0 "denpabu" { "denpabu subtable"  } ['salt' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 5" { "Single Substitution lookup 5 subtable"  } []
-Lookup: 6 0 0 "denpabuV" { "denpabuV subtable"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 6 0 0 "denpabuV" { "denpabuV subtable"  } ['salt' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 7" { "Single Substitution lookup 7 subtable"  } []
 Lookup: 6 0 0 "Clower" { "Clower contextual 0"  "Clower contextual 1"  "Clower contextual 2"  "Clower contextual 3"  "Clower contextual 4"  "Clower contextual 5"  "Clower contextual 6"  "Clower contextual 7"  "Clower contextual 8"  "Clower contextual 9"  "Clower contextual 10"  "Clower contextual 11"  "Clower contextual 12"  "Clower contextual 13"  "Clower contextual 14"  "Clower contextual 15"  "Clower contextual 16"  "Clower contextual 17"  "Clower contextual 18"  "Clower contextual 19"  "Clower contextual 20"  "Clower contextual 21"  "Clower contextual 22"  "Clower contextual 23"  "Clower contextual 24"  "Clower contextual 25"  "Clower contextual 26"  "Clower contextual 27"  "Clower contextual 28"  "Clower contextual 29"  "Clower contextual 30"  "Clower contextual 31"  "Clower contextual 32"  "Clower contextual 33"  "Clower contextual 34"  "Clower contextual 35"  "Clower contextual 36"  "Clower contextual 37"  "Clower contextual 38"  "Clower contextual 39"  "Clower contextual 40"  "Clower contextual 41"  "Clower contextual 42"  "Clower contextual 43"  "Clower contextual 44"  "Clower contextual 45"  "Clower contextual 46"  "Clower contextual 47"  "Clower contextual 48"  } ['liga' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 9" { "Single Substitution lookup 9 subtable"  } []
