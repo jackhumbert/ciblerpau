@@ -1,0 +1,170 @@
+# This file is designed in conjunction with the build.pe script to replace
+# the lookup tables so that they aren't appended and get out of control.
+# You can manually merge this with your .sfd file in Fontforge to be able
+# to take advantage of the built-in tools for previewing ligatures.
+
+#
+# ZLM OpenType Feature Table Definitions
+#
+
+@consonant = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy iy uy ];
+@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper iy.upper uy.upper ];
+@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower iy.lower uy.lower ];
+@singlevowel = [ abu ebu ibu obu ubu ybu ];
+@sv_upper = [ abu.upper ebu.upper ibu.upper obu.upper ubu.upper ybu.upper ];
+@sv_lower = [ abu.lower ebu.lower ibu.lower obu.lower ubu.lower ybu.lower ];
+@vowel = [ @singlevowel aibu eibu oibu aubu ];
+@v_upper = [ @sv_upper aibu.upper eibu.upper oibu.upper aubu.upper ];
+@v_lower = [ @sv_lower aibu.lower eibu.lower oibu.lower aubu.lower ];
+@anything = [ @consonant @vowel ];
+@upper = [ @c_upper @v_upper ];
+@lower = [ @c_lower @v_lower ];
+
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem latn DEU;
+languagesystem cyrl dflt;
+languagesystem cyrl SRB;
+languagesystem grek dflt;
+
+# sub diphthongs
+
+lookup semivowels {
+  lookupflag 0;
+  sub ibu' @singlevowel by iy;
+  sub ubu' @singlevowel by uy;
+} semivowels;
+
+lookup diphthongs {
+  lookupflag 0;
+  sub abu ibu by aibu;
+  sub ebu ibu by eibu;
+  sub obu ibu by oibu;
+  sub abu ubu by aubu;
+} diphthongs;
+
+# sub non-inits for .center
+
+lookup Clower {
+  lookupflag 0;
+  ignore sub @consonant @vowel @consonant @consonant';
+  sub py ly' by ly.lower;
+  sub py ry' by ry.lower;
+  sub fy ly' by ly.lower;
+  sub fy ry' by ry.lower;
+
+  sub \by ly' by ly.lower;
+  sub \by ry' by ry.lower;
+  sub vy ly' by ly.lower;
+  sub vy ry' by ry.lower;
+
+  sub cy py' by py.lower;
+  sub cy fy' by fy.lower;
+  sub cy ty' by ty.lower;
+  sub cy ky' by ky.lower;
+  sub cy my' by my.lower;
+  sub cy ny' by ny.lower;
+  sub cy ly' by ly.lower;
+  sub cy ry' by ry.lower;
+
+  sub jy \by' by \by.lower;
+  sub jy vy' by vy.lower;
+  sub jy dy' by dy.lower;
+  sub jy gy' by gy.lower;
+  sub jy my' by my.lower;
+
+  sub sy py' by py.lower;
+  sub sy fy' by fy.lower;
+  sub sy ty' by ty.lower;
+  sub sy ky' by ky.lower;
+  sub sy my' by my.lower;
+  sub sy ny' by ny.lower;
+  sub sy ly' by ly.lower;
+  sub sy ry' by ry.lower;
+
+  sub zy \by' by \by.lower;
+  sub zy vy' by vy.lower;
+  sub zy dy' by dy.lower;
+  sub zy gy' by gy.lower;
+  sub zy my' by my.lower;
+
+  sub ty cy' by cy.lower;
+  sub ty ry' by ry.lower;
+  sub ty sy' by sy.lower;
+  sub ky ly' by ly.lower;
+  sub ky ry' by ry.lower;
+
+  sub dy jy' by jy.lower;
+  sub dy ry' by ry.lower;
+  sub dy zy' by zy.lower;
+  sub gy ly' by ly.lower;
+  sub gy ry' by ry.lower;
+
+  sub my ly' by ly.lower;
+  sub my ry' by ry.lower;
+  sub xy ly' by ly.lower;
+  sub xy ry' by ry.lower;
+} Clower;
+
+lookup Clower2 {
+  lookupflag 0;
+  sub @consonant @vowel @consonant' by @c_lower;
+} Clower2;
+
+lookup Cupper {
+  lookupflag 0;
+  sub @consonant' @c_lower by @c_upper;
+} Cupper;
+
+lookup Cupper2 {
+  lookupflag 0;
+  sub @consonant' @vowel @c_lower by @c_upper;
+} Cupper2;
+
+lookup Vupper {
+  lookupflag 0;
+  sub @c_upper @vowel' @c_lower by @v_upper;
+} Vupper;
+
+lookup Vupper2 {
+  lookupflag 0;
+  sub @consonant @vowel' by @v_upper;
+} Vupper2;
+
+lookup Vlower {
+  lookupflag 0;
+  sub @c_upper @c_lower @vowel' by @v_lower;
+} Vlower;
+
+lookup Vdenpabu {
+  lookupflag 0;
+  sub denpabu @vowel' by @vowel;
+} Vdenpabu;
+
+feature liga {
+  script DFLT;
+    language dflt;
+    lookup semivowels;
+    lookup diphthongs;
+    lookup Clower;
+    lookup Clower2;
+    lookup Cupper;
+    lookup Cupper2;
+    lookup Vupper;
+    lookup Vupper2;
+    lookup Vlower;
+    lookup Vdenpabu;
+  script latn;
+    language dflt;
+    lookup semivowels;
+    lookup diphthongs;
+    lookup Clower;
+    lookup Clower2;
+    lookup Cupper;
+    lookup Cupper2;
+    lookup Vupper;
+    lookup Vupper2;
+    lookup Vlower;
+    lookup Vdenpabu;
+} liga;
+

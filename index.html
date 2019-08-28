@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>IME</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"-->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/ime.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--link rel="icon" type="image/png" href="images/favicon.png"-->
+
+  <style>
+    @font-face { font-family: "font"; font-weight: normal; src: url('font.otf'); }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="column">
+
+        <h1>Ciblerpau IME</h1>
+        <a href="https://github.com/jackhumbert/ciblerpau" class="button u-pull-left back-button">View on Github</a>
+
+        <textarea id="textarea" class="reference"></textarea>
+      </div>
+    </div>
+
+  </div>
+<script>
+
+HTMLTextAreaElement.prototype.insertAtCaret = function (text) {
+  if (this.selectionStart || this.selectionStart === 0) {
+    var startPos = this.selectionStart,
+        endPos   = this.selectionEnd,
+        before   = this.value.substring(0, startPos),
+        after    = this.value.substring(endPos, this.value.length);
+    this.value = before + text + after;
+    this.selectionStart = startPos + text.length;
+    this.selectionEnd   = startPos + text.length;
+  } else {
+    this.value += text;
+  }
+};
+
+// Global Helpers
+
+var log = console.log.bind(console);
+
+function id (x) {
+  return x;
+}
+
+function trim (str) {
+  return str.trim();
+}
+
+function toArray (list) {
+  return Array.prototype.slice.apply(list);
+}
+
+function Q (sel, parent) {
+  return toArray((parent || document).querySelectorAll(sel));
+};
+
+function comp (a, b) {
+  return function (x) { return a(b(x)); }
+}
+
+function defer (λ) {
+  return setTimeout(λ, 0);
+}
+
+function deferOf (λ) {
+  return function () { defer(λ); };
+}
+
+var ta = document.getElementById("textarea");
+
+const UNICODE_START = 0xEB40;
+const lerfu_index = "ptkflscmx aeiouybdgvrzjn'     ,.";
+
+function latinConvert(c) {
+  if (c.codePointAt(0) >= 0xEB40) {
+    return c;
+  }
+  if (c == " ")
+    return " ";
+  if (c == "h" || c == "H")
+    c = "'";
+  if (lerfu_index.indexOf(c.toLowerCase()) >= 0)
+    return String.fromCodePoint(UNICODE_START + lerfu_index.indexOf(c.toLowerCase()));
+  if (c == "\n")
+    return "\n";
+  if (c == "\t")
+    return "\t";
+  return "";
+}
+
+ta.onkeydown = function(event) {
+  var kc = event.keyCode;
+  var k = event.key;
+
+  if (kc == 8) // backspace
+    return true;
+  if (kc >= 37 && kc <= 40) // arrow keys
+    return true;
+  if (event.ctrlKey) // ignore anything with ctrl
+    return true;
+  if (kc == 13)
+    k = "\n";
+  if (kc == 9)
+    k = "\t";
+
+  ta.insertAtCaret(latinConvert(k));
+  return false;
+};
+
+ta.onpaste = function(event) {
+  var text = undefined;
+  if (window.clipboardData && window.clipboardData.getData) { // IE
+    text = window.clipboardData.getData('Text');
+  } else if (event.clipboardData && event.clipboardData.getData) {
+    text = event.clipboardData.getData('text/plain');
+  }
+  for (var i = 0; i < [...text].length; i++) {
+    ta.insertAtCaret(latinConvert([...text][i]));
+  }
+  return false;
+}; 
+
+ta.focus();
+
+</script>
+</body>
+</html>
