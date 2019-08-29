@@ -9,8 +9,8 @@ Version: 001.000
 ItalicAngle: 0
 UnderlinePosition: -1020
 UnderlineWidth: 178
-Ascent: 1610
-Descent: 800
+Ascent: 1000
+Descent: 500
 InvalidEm: 0
 LayerCount: 2
 Layer: 0 0 "Back" 1
@@ -22,12 +22,12 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1566577596
-ModificationTime: 1567020120
+ModificationTime: 1567084419
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
 OS2TypoDOffset: 1
-OS2TypoLinegap: 217
+OS2TypoLinegap: 135
 OS2WinAscent: 0
 OS2WinAOffset: 1
 OS2WinDescent: 0
@@ -113,8 +113,8 @@ DEI: 91125
 ChainSub2: coverage "Vlower subtable" 0 0 0 1
  1 2 0
   Coverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 152 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower
-  BCoverage: 152 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper
+  BCoverage: 176 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower slakabu.lower
+  BCoverage: 176 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper slakabu.upper
  1
   SeqLookup: 0 "Single Substitution lookup 68"
 EndFPST
@@ -128,31 +128,31 @@ EndFPST
 ChainSub2: coverage "Vupper subtable" 0 0 0 1
  1 1 1
   Coverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 152 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper
-  FCoverage: 152 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower
+  BCoverage: 176 py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper slakabu.upper
+  FCoverage: 176 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower slakabu.lower
  1
   SeqLookup: 0 "Single Substitution lookup 64"
 EndFPST
 ChainSub2: coverage "Cupper2 subtable" 0 0 0 1
  1 0 2
-  Coverage: 50 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny
+  Coverage: 62 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy slakabu
   FCoverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  FCoverage: 152 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower
+  FCoverage: 176 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower slakabu.lower
  1
   SeqLookup: 0 "Single Substitution lookup 62"
 EndFPST
 ChainSub2: coverage "Cupper subtable" 0 0 0 1
  1 0 1
-  Coverage: 50 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny
-  FCoverage: 152 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower
+  Coverage: 62 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy slakabu
+  FCoverage: 176 py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower slakabu.lower
  1
   SeqLookup: 0 "Single Substitution lookup 60"
 EndFPST
 ChainSub2: coverage "Clower2 subtable" 0 0 0 1
  1 2 0
-  Coverage: 50 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny
+  Coverage: 62 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy slakabu
   BCoverage: 43 abu ebu ibu obu ubu ybu aibu eibu oibu aubu
-  BCoverage: 50 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny
+  BCoverage: 62 py ty ky fy ly sy cy my xy by dy gy vy ry zy jy ny yhy slakabu
  1
   SeqLookup: 0 "Single Substitution lookup 58"
 EndFPST
@@ -565,7 +565,7 @@ Grid
   Named: "z-top"
 EndSplineSet
 AnchorClass2: "Above" "Above-1"
-BeginChars: 294 93
+BeginChars: 294 95
 
 StartChar: space
 Encoding: 204 32 0
@@ -780,7 +780,7 @@ StartChar: sy
 Encoding: 5 60229 6
 Width: 1200
 VWidth: 2000
-Flags: WO
+Flags: W
 HStem: 24.4717 79.0566<567.347 827.042> 546.472 79.0566<546.977 674.282> 896.472 79.0566<385.555 740.14>
 VStem: 400.472 79.0566<191.423 483.954> 982.472 79.0566<295.653 638.646>
 AnchorPoint: "Above" 600 0 basechar 0
@@ -1528,6 +1528,9 @@ SplineSet
  260.47265625 976.283203125 l 1
  300.000976562 1000 l 1
 EndSplineSet
+Substitution2: "Single Substitution lookup 62 subtable" yhy.upper
+Substitution2: "Single Substitution lookup 60 subtable" yhy.upper
+Substitution2: "Single Substitution lookup 58 subtable" yhy.lower
 EndChar
 
 StartChar: uy
@@ -1535,33 +1538,29 @@ Encoding: 25 60249 26
 Width: 1200
 VWidth: 4000
 Flags: W
-HStem: -14.5283 79.0566<169.528 1026.47>
-VStem: 90.4717 79.0566<64.5283 976.283> 1026.47 79.0566<64.5283 976.283>
+HStem: -39.5293 79.0576<422.219 798.285>
+VStem: 110.473 79.0557<695.193 976.099> 1010.47 79.0527<709.359 976.607>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
 SplineSet
-130 1000 m 29
- 130 25 l 29
- 1066 25 l 29
- 1066 1000 l 1053
+150 1000 m 5
+ 154.661755972 364.630685409 98.0513971739 0.72189153949 600 0 c 7
+ 1099.40665801 0 1041.72753122 348.155088764 1050 1000 c 1029
 EndSplineSet
 Fore
 SplineSet
-130 1000 m 1
- 169.528320312 1023.71679688 l 1
- 169.528320312 64.5283203125 l 1
- 1026.47167969 64.5283203125 l 1
- 1026.47167969 976.283203125 l 1
- 1066 1000 l 1
- 1105.52832031 1023.71777344 l 1
- 1105.52832031 48.716796875 l 2
- 1105.52832031 44.6025390625 1103.42089844 35.615234375 1099.38574219 28.1005859375 c 0
- 1087.22070312 5.44921875 1060.45996094 -14.5283203125 1042.28222656 -14.5283203125 c 2
- 106.283203125 -14.5283203125 l 2
- 97.9609375 -14.5283203125 90.4716796875 -8.95703125 90.4716796875 1.283203125 c 2
- 90.470703125 976.283203125 l 1
- 130 1000 l 1
+150 1000 m 1
+ 189.528320312 1023.90136719 l 1
+ 194.229492188 383.176757812 139.400390625 40.2255859375 623.735351562 39.5283203125 c 0
+ 738.9453125 39.5283203125 819.897460938 60.37890625 867.999023438 88.802734375 c 0
+ 1016.4609375 176.532226562 1003.82128906 452.435546875 1010.47363281 976.607421875 c 1
+ 1050 1000 l 1
+ 1089.52636719 1023.39257812 l 1
+ 1083.515625 549.729492188 1135.484375 183.616210938 867.102539062 25.0234375 c 0
+ 787.442382812 -22.048828125 695.36328125 -39.529296875 576.282226562 -39.529296875 c 0
+ 56.685546875 -38.78125 115.094726562 346.080078125 110.47265625 976.098632812 c 1
+ 150 1000 l 1
 EndSplineSet
 EndChar
 
@@ -1569,7 +1568,7 @@ StartChar: aibu
 Encoding: 26 60250 27
 Width: 600
 VWidth: 0
-Flags: W
+Flags: WO
 HStem: 417.06 173.881<217.176 382.824> 1149.28 365.436 1236.12 173.881<334.225 499.873>
 VStem: 144.472 79.0566<1196.72 1467.28> 210.065 179.869<425.584 582.416> 327.114 179.869<1244.64 1401.48>
 LayerCount: 2
@@ -1651,6 +1650,24 @@ Width: 0
 VWidth: 0
 Flags: W
 LayerCount: 2
+Back
+SplineSet
+100 0 m 29
+ 1099 998 l 1053
+EndSplineSet
+Fore
+SplineSet
+100 0 m 1
+ 82.357421875 17.7138671875 l 1
+ 1081.35742188 1015.71289062 l 1
+ 1099 998 l 1
+ 1116.64257812 980.287109375 l 1
+ 117.642578125 -17.712890625 l 1
+ 100 0 l 1
+EndSplineSet
+Substitution2: "Single Substitution lookup 62 subtable" slakabu.upper
+Substitution2: "Single Substitution lookup 60 subtable" slakabu.upper
+Substitution2: "Single Substitution lookup 58 subtable" slakabu.lower
 EndChar
 
 StartChar: py.upper
@@ -2354,8 +2371,8 @@ Encoding: 57 -1 56
 Width: 1200
 VWidth: 4000
 Flags: W
-HStem: -14.5283 79.0566<169.528 1026.47> 417.06 173.881<517.176 682.824>
-VStem: 90.4717 79.0566<64.5283 976.283> 510.065 179.869<425.584 582.416> 1026.47 79.0566<64.5283 976.283>
+HStem: -39.5293 79.0576<422.219 798.285> 417.06 173.881<517.176 682.824>
+VStem: 110.473 79.0557<695.193 976.099> 510.065 179.869<425.584 582.416> 1010.47 79.0527<709.359 976.607>
 AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
@@ -2428,12 +2445,27 @@ Refer: 42 -1 N 1 0 0 1 0 0 2
 Refer: 46 -1 N 1 0 0 1 0 0 2
 EndChar
 
-StartChar: .notdef
+StartChar: slakabu.upper
 Encoding: 62 -1 61
 Width: 1200
 VWidth: 0
 Flags: W
 LayerCount: 2
+Back
+SplineSet
+100 546 m 29
+ 1099 992 l 1053
+EndSplineSet
+Fore
+SplineSet
+100 546 m 1
+ 107.451171875 581.526367188 l 1
+ 1106.45117188 1027.52636719 l 1
+ 1099 992 l 1
+ 1091.54882812 956.473632812 l 1
+ 92.548828125 510.473632812 l 1
+ 100 546 l 1
+EndSplineSet
 EndChar
 
 StartChar: denpabu.liga
@@ -2807,12 +2839,27 @@ Fore
 Refer: 60 -1 N 1 0 0 1 0 -1684 2
 EndChar
 
-StartChar: NameMe.62
+StartChar: slakabu.lower
 Encoding: 94 -1 90
 Width: 0
 VWidth: 0
 Flags: W
 LayerCount: 2
+Back
+SplineSet
+100 1 m 29
+ 1099 447 l 1053
+EndSplineSet
+Fore
+SplineSet
+100 1 m 1
+ 107.451171875 36.5263671875 l 1
+ 1106.45117188 482.526367188 l 1
+ 1099 447 l 1
+ 1091.54882812 411.473632812 l 1
+ 92.548828125 -34.5263671875 l 1
+ 100 1 l 1
+EndSplineSet
 EndChar
 
 StartChar: NameMe.63
@@ -2841,6 +2888,73 @@ SplineSet
  250.637695312 417.059570312 210.065429688 455.700195312 210.065429688 504 c 0
 EndSplineSet
 Substitution2: "Single Substitution lookup 5 subtable" denpabu.liga
+EndChar
+
+StartChar: yhy.upper
+Encoding: 56 -1 93
+Width: 2410
+VWidth: 0
+HStem: 526.339 497.321
+VStem: 360.472 79.0566<573.717 976.283> 760.472 79.0566<573.66 976.339>
+LayerCount: 2
+Back
+SplineSet
+801 1000 m 29
+ 800 550 l 1053
+400 1000 m 29
+ 400 550 l 1053
+EndSplineSet
+Fore
+SplineSet
+801 1000 m 1
+ 840.528320312 1023.66015625 l 1
+ 839.528320312 573.66015625 l 1
+ 800 550 l 1
+ 760.471679688 526.338867188 l 1
+ 761.471679688 976.338867188 l 1
+ 801 1000 l 1
+400 1000 m 1
+ 439.528320312 1023.71679688 l 1
+ 439.528320312 573.716796875 l 1
+ 400 550 l 1
+ 360.471679688 526.282226562 l 1
+ 360.471679688 976.283203125 l 1
+ 400 1000 l 1
+EndSplineSet
+EndChar
+
+StartChar: yhy.lower
+Encoding: 88 -1 94
+Width: 2410
+VWidth: 0
+Flags: W
+HStem: -23.6611 497.322
+VStem: 360.472 79.0566<23.7168 426.283> 760.472 79.0566<23.6611 426.34>
+LayerCount: 2
+Back
+SplineSet
+801 450 m 29
+ 800 0 l 1053
+400 450 m 29
+ 400 0 l 1053
+EndSplineSet
+Fore
+SplineSet
+801 450 m 1
+ 840.528320312 473.661132812 l 1
+ 839.528320312 23.6611328125 l 1
+ 800 -0 l 1
+ 760.471679688 -23.6611328125 l 1
+ 761.471679688 426.33984375 l 1
+ 801 450 l 1
+400 450 m 1
+ 439.528320312 473.717773438 l 1
+ 439.528320312 23.716796875 l 1
+ 400 -0 l 1
+ 360.471679688 -23.716796875 l 1
+ 360.471679688 426.283203125 l 1
+ 400 450 l 1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont
