@@ -63,20 +63,25 @@ lookup weirdUppers {
   ignore sub yhy' @vowel @c_reg @vowel;
   ignore sub slakabu' @vowel @c_reg @vowel;
   sub yhy' @vowel @c_reg by yhy.upper;
-  sub slakabu' @vowel @c_reg by slakabu.upper;
+  sub slakabu' @vowel @c_reg by kuntibu.upper;
 } weirdUppers;
 
 lookup weirdUppers2 {
   lookupflag 0;
   sub yhy.upper @vowel' @c_reg by @v_upper;
-  sub slakabu.upper @vowel' @c_reg by @v_upper;
+  sub kuntibu.upper @vowel' @c_reg by @v_upper;
 } weirdUppers2;
 
 lookup weirdUppers3 {
   lookupflag 0;
   sub yhy.upper @v_upper @c_reg' by @c_lower;
-  sub slakabu.upper @v_upper @c_reg' by @c_lower;
+  sub kuntibu.upper @v_upper @c_reg' by @c_lower;
 } weirdUppers3;
+
+lookup kuntibuConversion {
+  lookupflag 0;
+  sub slakabu' @vowel by kuntibu;
+} kuntibuConversion;
 
 lookup Clower {
   lookupflag 0;
@@ -162,6 +167,7 @@ lookup Vupper {
 lookup Vupper2 {
   lookupflag 0;
   sub @consonant @vowel' by @v_upper;
+  sub kuntibu @vowel' by @v_upper;
 } Vupper2;
 
 lookup Vlower {
@@ -197,6 +203,7 @@ feature liga {
     lookup weirdUppers;
     lookup weirdUppers2;
     lookup weirdUppers3;
+    lookup kuntibuConversion;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
@@ -213,6 +220,7 @@ feature liga {
     lookup weirdUppers;
     lookup weirdUppers2;
     lookup weirdUppers3;
+    lookup kuntibuConversion;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;

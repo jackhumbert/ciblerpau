@@ -131,8 +131,9 @@ ta.onkeydown = function(event) {
     k = "\n";
   if (kc == 9)
     k = "\t";
-
-  ta.insertAtCaret(latinConvert(k));
+  var n = latinConvert(k);
+  log(n);
+  ta.insertAtCaret(n);
   return false;
 };
 
