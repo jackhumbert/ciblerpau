@@ -8,9 +8,9 @@
 #
 
 @consonant = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy iy uy ];
-@c_reg = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny yhy slakabu ];
-@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper yhy.upper slakabu.upper ];
-@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower yhy.lower slakabu.lower ];
+@c_reg = [ py ty ky fy ly sy cy my xy \by dy gy vy ry zy jy ny ];
+@c_upper = [ py.upper ty.upper ky.upper fy.upper ly.upper sy.upper cy.upper my.upper xy.upper \by.upper dy.upper gy.upper vy.upper ry.upper zy.upper jy.upper ny.upper ];
+@c_lower = [ py.lower ty.lower ky.lower fy.lower ly.lower sy.lower cy.lower my.lower xy.lower \by.lower dy.lower gy.lower vy.lower ry.lower zy.lower jy.lower ny.lower ];
 @semivowel = [ iy uy ];
 @semivowel_dotted = [ iy.dotted uy.dotted ];
 @singlevowel = [ abu ebu ibu obu ubu ybu ];
@@ -57,6 +57,26 @@ lookup denpabuV {
 } denpabuV;
 
 # sub non-inits for .center
+
+lookup weirdUppers {
+  lookupflag 0;
+  ignore sub yhy' @vowel @c_reg @vowel;
+  ignore sub slakabu' @vowel @c_reg @vowel;
+  sub yhy' @vowel @c_reg by yhy.upper;
+  sub slakabu' @vowel @c_reg by slakabu.upper;
+} weirdUppers;
+
+lookup weirdUppers2 {
+  lookupflag 0;
+  sub yhy.upper @vowel' @c_reg by @v_upper;
+  sub slakabu.upper @vowel' @c_reg by @v_upper;
+} weirdUppers2;
+
+lookup weirdUppers3 {
+  lookupflag 0;
+  sub yhy.upper @v_upper @c_reg' by @c_lower;
+  sub slakabu.upper @v_upper @c_reg' by @c_lower;
+} weirdUppers3;
 
 lookup Clower {
   lookupflag 0;
@@ -174,6 +194,9 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
+    lookup weirdUppers;
+    lookup weirdUppers2;
+    lookup weirdUppers3;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
@@ -187,6 +210,9 @@ feature liga {
     language dflt;
     lookup semivowels;
     lookup diphthongs;
+    lookup weirdUppers;
+    lookup weirdUppers2;
+    lookup weirdUppers3;
     lookup Clower;
     lookup Clower2;
     lookup Cupper;
