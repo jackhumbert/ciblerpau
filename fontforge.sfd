@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1566577596
-ModificationTime: 1567084419
+ModificationTime: 1567084756
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -1568,7 +1568,7 @@ StartChar: aibu
 Encoding: 26 60250 27
 Width: 600
 VWidth: 0
-Flags: WO
+Flags: W
 HStem: 417.06 173.881<217.176 382.824> 1149.28 365.436 1236.12 173.881<334.225 499.873>
 VStem: 144.472 79.0566<1196.72 1467.28> 210.065 179.869<425.584 582.416> 327.114 179.869<1244.64 1401.48>
 LayerCount: 2
@@ -1646,9 +1646,10 @@ EndChar
 
 StartChar: slakabu
 Encoding: 30 60254 31
-Width: 0
+Width: 1200
 VWidth: 0
-Flags: W
+Flags: WO
+AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -2450,6 +2451,7 @@ Encoding: 62 -1 61
 Width: 1200
 VWidth: 0
 Flags: W
+AnchorPoint: "Above" 600 0 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -2844,6 +2846,7 @@ Encoding: 94 -1 90
 Width: 0
 VWidth: 0
 Flags: W
+AnchorPoint: "Above" 600 0 mark 0
 LayerCount: 2
 Back
 SplineSet
